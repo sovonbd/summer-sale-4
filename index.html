@@ -1,13 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer initial-scale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+        font-family: "Work Sans", sans-serif;
+        color: #111;
+      }
+    </style>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="bg-[#F9F6E2]">
+      <!-- banner section -->
+      <section class="px-56 py-16">
+        <div class="flex flex-col-reverse justify-center items-center md:flex-row gap-4">
+          <div class="text-center">
+            <h3 class="text-2xl font-medium">---SALE FEVER---</h3>
+            <h1 class="text-5xl font-bold my-8 w-[600px]">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
+            <p class="text-base font-medium">
+              <span>Use promo Code</span>
+              <button class="btn btn-sm btn-secondary font-semibold text-white">SELL200</button>
+            </p>
+          </div>
+          <img class="max-w-xl" src="./images/Summer 1.png" alt="" />
+        </div>
+      </section>
+    </header>
+    <main class="mx-56 my-28">
+      <div>
+        <!-- card section -->
+        <div>
+          <h3 class="text-3xl font-semibold">Kitchenware</h3>
+          <div>
+            <!-- card 1 -->
+            <div class="card w-80 bg-base-100 shadow-xl text-center">
+              <figure><img class="bg-[#1111110D] rounded-lg px-24 py-8 my-5" src="./images/prod1.png" alt="" /></figure>
+              <div class="card-body items-center p-4">
+                <!-- ratings -->
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="card-title text-sm font-semibold">K. Accessories</h2>
+                <p class="text-[#11111180] text-sm">39.00 TK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./script/script.js"></script>
   </body>
 </html>
