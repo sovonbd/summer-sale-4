@@ -13,12 +13,9 @@ function couponCheck() {
   applyBtn.addEventListener("click", function () {
     if (coupon.value === "SELL20") {
       discount.innerText = (totalPrice * 0.2).toFixed(2);
+      total.innerText = (totalPrice - discount.innerText).toFixed(2);
     }
-    console.log(discount);
-    console.log(totalPrice);
   });
-  //   console.log(discount);
-  //   console.log(totalPrice);
 }
 
 function kitchenware(event) {
@@ -41,4 +38,10 @@ function kitchenware(event) {
     document.getElementById("btn-purchase").setAttribute("enabled");
   }
   couponCheck();
+  const total = document.getElementById("total");
+  total.innerText = totalPrice.innerText;
+}
+
+function goHome() {
+  window.location.href = "./index.html";
 }
