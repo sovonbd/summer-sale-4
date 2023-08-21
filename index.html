@@ -27,7 +27,7 @@
             <h1 class="text-3xl lg:text-5xl font-bold my-8 max-w-[600px]">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
             <p class="text-xl lg:text-2xl font-medium">
               <span>Use Promo Code</span>
-              <button class="bg-[#E527B2] px-3 py-1 rounded-md font-semibold text-white">SELL20</button>
+              <button class="bg-[#E527B2] px-3 py-1 rounded-md font-semibold text-white">SELL200</button>
             </p>
           </div>
           <img class="max-w-sm lg:max-w-xl" src="./images/Summer 1.png" alt="" />
@@ -223,12 +223,14 @@
               <div id="selected-items" class="text-xl font-medium pl-24 md:pl-64 lg:pl-0"></div>
               <hr class="my-6" />
               <!-- items calculation -->
-              <div class="text-xl font-medium text-center lg:text-left">
+              <div class="text-xl font-medium text-center lg:text-left relative">
                 <p>Total price: <span id="total-price" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span></p>
                 <p>Discount: <span id="discount" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span></p>
                 <p>Total: <span id="total" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span></p>
                 <hr class="my-6" />
-                <button id="btn-purchase" class="btn btn-secondary font-semibold text-white w-full normal-case text-xl" onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+                <button id="btn-purchase" class="btn btn-secondary font-semibold text-white w-full normal-case text-xl absolute top-32 right-0" onclick="my_modal_1.showModal()" disabled>
+                  Make Purchase
+                </button>
                 <!-- Open the modal using ID.showModal() method -->
                 <dialog id="my_modal_1" class="modal">
                   <form method="dialog" class="modal-box text-center max-w-fit max-h-fit px-10 md:px-24 lg:px-28 lg:py-28">

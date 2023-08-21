@@ -15,13 +15,13 @@ function couponCheck() {
     applyBtn.setAttribute("disabled", true);
   }
   applyBtn.addEventListener("click", function () {
-    if (coupon.value === "SELL20") {
+    if (coupon.value === "SELL200") {
       discount.innerText = (totalPrice * 0.2).toFixed(2);
       total.innerText = (totalPrice - discount.innerText).toFixed(2);
     }
   });
+  coupon.value = "";
 }
-
 
 let price = 0;
 function kitchenware(event) {
