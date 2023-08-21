@@ -1,10 +1,14 @@
-let price = 0;
+// function to call the input ID
+function getInput(elementID) {
+  return document.getElementById(elementID);
+}
 
+// function to check coupon requirements
 function couponCheck() {
-  const coupon = document.getElementById("coupon");
-  const discount = document.getElementById("discount");
-  const totalPrice = document.getElementById("total-price").innerText;
-  const applyBtn = document.getElementById("btn-apply");
+  const coupon = getInput("coupon");
+  const discount = getInput("discount");
+  const totalPrice = getInput("total-price").innerText;
+  const applyBtn = getInput("btn-apply");
   if (totalPrice >= 200) {
     applyBtn.removeAttribute("disabled");
   } else {
@@ -18,9 +22,11 @@ function couponCheck() {
   });
 }
 
+
+let price = 0;
 function kitchenware(event) {
   const itemName = event.childNodes[3].childNodes[5].innerText;
-  const selectedItems = document.getElementById("selected-items");
+  const selectedItems = getInput("selected-items");
   const p = document.createElement("p");
   const count = selectedItems.childElementCount;
   p.innerHTML = `
@@ -29,16 +35,16 @@ function kitchenware(event) {
   selectedItems.appendChild(p);
 
   const itemPrice = parseFloat(event.childNodes[3].childNodes[7].innerText);
-  const totalPrice = document.getElementById("total-price");
+  const totalPrice = getInput("total-price");
   price += itemPrice;
   if (price > 0) {
-    document.getElementById("btn-purchase").removeAttribute("disabled");
+    getInput("btn-purchase").removeAttribute("disabled");
     totalPrice.innerText = price.toFixed(2);
   } else {
-    document.getElementById("btn-purchase").setAttribute("enabled");
+    getInput("btn-purchase").setAttribute("enabled");
   }
   couponCheck();
-  const total = document.getElementById("total");
+  const total = getInput("total");
   total.innerText = totalPrice.innerText;
 }
 
